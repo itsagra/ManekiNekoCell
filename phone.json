@@ -1,0 +1,162 @@
+[
+    {
+        "product_name": "Samsung Galaxy S20 FE",
+        "description": "Meet Galaxy S20, S20+, and S20 Ultra. With revolutionary 8K Video Snap changing how you capture not just video, but photography.",
+        "merk": "Samsung",
+        "stock": 20,
+        "price": 10000000,
+        "url": "https://ecs7.tokopedia.net/img/cache/700/product-1/2020/4/14/4160524/4160524_cb6dab83-bb6d-4826-863a-3e9155de7506_700_700"
+    },
+    {
+        "product_name": "Samsung Galaxy Z Fold2",
+        "description": "Meet the phone that's changing the shape of the future. The world's number one foldable, this cutting-edge smartphone puts powerful performance, foldable glass, and an all-day battery all in the palm of your hand",
+        "merk": "Samsung",
+        "stock": 20,
+        "price": 34000000,
+        "url": "https://images.samsung.com/is/image/samsung/assets/id/smartphones/galaxy-z-fold2/images/galaxy-z-fold2_highlights_acc_device_full_a.jpg"
+    },
+    {
+        "product_name": "Samsung Galaxy Note 20 Ultra",
+        "description": "The first to merge a pen with a phone, Note put a whole new world in your pocket. As we face a new normal, life demands a new kind of device. This is not a smartphone as you know it. This is a computer suite in your pocket. This is next-level gaming on mobile. This is a pro-grade 8K camera and editing suite.",
+        "merk": "Samsung",
+        "stock": 20,
+        "price": 18000000,
+        "url": "https://images.samsung.com/id/smartphones/galaxy-note20/images/galaxy-note20_highlights_acc_device.jpg"
+    },
+    {
+        "product_name": "Samsung Galaxy A71",
+        "description": "Behind Galaxy A71's symmetrically aligned 6.7inch Infinity-O Display, Super AMOLED Plus color technology delivers real-to-life color in everything you watch and do—from gaming and movies, to web-surfing and multi-tasking. Start enjoying more of what you love, without the screen getting in your way.",
+        "merk": "Samsung",
+        "stock": 20,
+        "price": 6000000,
+        "url": "https://images.samsung.com/is/image/samsung/id-feature-galaxy-a71-a715-204731356?$FB_TYPE_A_JPG$"
+    },
+    {
+        "product_name": "Samsung Galaxy M51",
+        "description": "M51's Infinity-O Display optimizes visual symmetry. Now you can game, watch, surf, and multi-task without interruption on a 6.7inch FHD+ widescreen display—all powered by Super AMOLED Plus technology. Enjoy a smartphone experience that minimizes the bezel and maximizes each inch of screen space.",
+        "merk": "Samsung",
+        "stock": 20,
+        "price": 5500000,
+        "url": "https://images.samsung.com/is/image/samsung/id-feature-comfortable-design-that-shines-295901810?$FB_TYPE_A_JPG$"
+    },
+    {
+        "product_name": "Oppo Reno 4 F",
+        "description": "Layar mengagumkan yang sangat besar. Dengan tampilan dual punch-hole, desainer kami mengoptimalkan setiap milimeter notch yang mengelilingi dua kamera depan, Memaksimalkan ruang sebanyak mungkin pada layar resolusi tinggi FHD+ 2400 x 1080 piksel yang memanjakan visual.",
+        "merk": "Oppo",
+        "stock": 20,
+        "price": 5000000,
+        "url": "https://www.oppo.com/content/dam/oppo/product-asset-library/a/a93/reno4-f-indonesia/sec-3-img-2-1440.png"
+    },
+    {
+        "product_name": "Oppo Reno 4 Pro",
+        "description": "Siapa kira sebuah lengkungan yang halus menjadi teknologi yang sangat canggih? Layar lengkung 3D kami menghadirkan kehalusan dimensi, sementara refresh rate 90Hz *1 menghadirkan kehalusan grafis. Menghasilkan tampilan menarik yang memancarkan daya tarik berkelas dan berteknologi tinggi.",
+        "merk": "Oppo",
+        "stock": 20,
+        "price": 5000000,
+        "url": "https://ecs7.tokopedia.net/img/cache/700/VqbcmM/2020/9/19/f6af3120-b510-4f13-b4eb-7419e23b10b3.jpg"
+    },
+    {
+        "product_name": "Oppo Find X2 Pro",
+        "description": "The Find series has always pushed the boundaries of technology, to constantly create new possibilities. Now we’re doing it again, awakening your senses, with the new Find X2 series.",
+        "merk": "Oppo",
+        "stock": 20,
+        "price": 4500000,
+        "url": "https://fdn2.gsmarena.com/vv/pics/oppo/oppo-find-x2-pro-orange-leather.jpg"
+    },
+    {
+        "product_name": "Oppo A92",
+        "description": "OPPO A92 memiliki layar beresolusi sangat tinggi dengan desain Neo dan sisi yang sangat tipis hanya 1,73mm. Nikmati pengalaman visual yang lebih jernih dan lebih mendalam, mulai dari menonton video hingga bermain game.",
+        "merk": "Oppo",
+        "stock": 20,
+        "price": 4500000,
+        "url": "https://assorted.downloads.oppo.com/static/assets/products/a92/images/1920/sec-3-phone3-2-f42b085e2e4b0c3d9ba01d8331fc17f2.png"
+    },
+    {
+        "product_name": "Oppo A9",
+        "description": "OPPO A9 2020 memuat lima kamera terpisah ke dalam sebuah smartphone. Lensa 48MP pada kamera belakang untuk menciptakan resolusi foto yang maksimal. Lensa Ultra Wide 119° pada kamera belakang untuk foto panorama. Dua lensa pada kamera belakang untuk menyajikan efek potret artistik. Dan sebuah kamera depan 16MP yang didukung AI Beautification.",
+        "merk": "Oppo",
+        "stock": 20,
+        "price": 4000000,
+        "url": "https://cf.shopee.co.id/file/31eab3f54b5e49bcd75931724ad74f67"
+    },
+    {
+        "product_name": "iPhone 11",
+        "description": "The iPhone 11 succeeds the iPhone XR, and it features a 6.1-inch LCD display that Apple calls a Liquid Retina HD Display. It features a 1792 x 828 resolution at 326ppi, a 1400:1 contrast ratio, 625 nits max brightness, True Tone support for adjusting the white balance to the ambient lighting, and wide color support for true-to-life colors.",
+        "merk": "Apple", 
+        "stock": 50,
+        "price": 12500000,
+        "url": "https://renanstore.co.id/wp-content/uploads/2020/01/iphone-11-new.png"
+    },
+    {
+        "product_name": "iPhone XR",
+        "description": "The Apple iPhone XR is a smartphone that was tested with the iOS 12.0. 1 operating system. This model weighs 6.9 ounces, has a 6.1 inch display, 12-megapixel main camera, and 7-megapixel selfie camera. It comes with 3GB of RAM.",
+        "merk": "Apple",
+        "stock": 20,
+        "price": 10900000,
+        "url": "https://renanstore.co.id/wp-content/uploads/2019/03/xr-2.png"
+    },
+    {
+        "product_name": "iPhone XS",
+        "description": "The 5.8-inch iPhone Xs and 6.5-inch iPhone Xs Max feature stunning Super Retina displays, a faster and improved dual camera system that offers breakthrough photo and video features, the first 7-nanometer chip in a smartphone — the A12 Bionic chip with next-generation Neural Engine — faster Face ID, wider stereo sound",
+        "merk": "Apple",
+        "stock": 20,
+        "price": 11800000,
+        "url": "https://renanstore.co.id/wp-content/uploads/2019/07/xs.png"
+    },    
+    {
+        "product_name": "iPhone SE 2020",
+        "description": "At A Glance. The original iPhone SE was a budget 4-inch iPhone before being discontinued in 2018, but Apple revived the name in April 2020 with a new 4.7-inch model that looks like an iPhone 8 with internals similar to those of the iPhone 11. It features an A13 Bionic chip, 3GB RAM",
+        "merk": "Apple",
+        "stock": 20,
+        "price": 6950000,
+        "url": "https://renanstore.co.id/wp-content/uploads/2020/09/SE-2.jpeg"
+    },    
+    {
+        "product_name": "iPhone XS Max",
+        "description": "The 5.8-inch iPhone Xs and 6.5-inch iPhone Xs Max feature stunning Super Retina displays, a faster and improved dual camera system that offers breakthrough photo and video features, the first 7-nanometer chip in a smartphone — the A12 Bionic chip with next-generation Neural Engine — faster Face ID, wider stereo sound",
+        "merk": "Apple",
+        "stock": 20,
+        "price": 14200000,
+        "url": "https://renanstore.co.id/wp-content/uploads/2019/03/xs-max.png"
+    },
+    {
+        "product_name": "Redmi Note 9 Pro",
+        "description":"Redmi Note 9 Pro, equipped with an ultra high resolution camera and UI optimization, you can capture the moment any time. You can fall in love with photography even more. With the Redmi Note 9 Pro, the beautiful life must be immortalized and become an unforgettable memory.",
+        "merk": "Xiaomi",
+        "stock": 20,
+        "price": 2700000,
+        "url": "http://i01.appmifile.com/webfile/globalweb/wangmingxin/J15S-White-800.png"
+    },   
+    {
+        "product_name": "Redmi 9",
+        "description": "Full HD + 2340x1080 resolution ensures an immersive visual experience and provides a clear view of the world around you. With certified blue light, you can spend hours on your smartphone without making your eyes tire faster.",
+        "merk": "Xiaomi",
+        "stock": 20,
+        "price":1750000,
+        "url": "http://i01.appmifile.com/webfile/globalweb/wangmingxin/J19-Purple-800x800.png"
+    },
+    {
+        "product_name": "Redmi Note 8",
+        "description": "The phone is powered by Octa core (2 GHz, Quad core, Kryo 260 + 1.8 GHz, Quad core, Kryo 260) processor. It runs on the Qualcomm Snapdragon 665 Chipset. It has 4 GB RAM and 64 GB internal storage. Xiaomi Redmi Note 8 smartphone has a IPS LCD display.",
+        "merk": "Xiaomi",
+        "stock": 20,
+        "price": 1799000,
+        "url": "https://i01.appmifile.com/webfile/globalimg/0320/event/C3J-redmi-note8/blue-c3j-800.jpg"
+    },
+    {
+        "product_name": "Mi 10",
+        "description":"The Mi 10 is equipped with a 108MP quad camera setup with the primary camera having a 1/1.33-inch sensor, a 13MP ultra wide camera with 123-degree FOV, a 2MP macro sensor and a 2MP depth sensor. On the front, there is a 20MP selfie camera. The device comes in two UFS 3.0 storage options: 128GB and 256GB.",
+        "merk": "Xiaomi",
+        "stock": 20,
+        "price": 6990000,
+        "url": "https://i01.appmifile.com/webfile/globalimg/Mandy/J2-gray-800.png"
+    },
+    {
+        "product_name": "Redmi 9c",
+        "description": "The Xiaomi Redmi 9C is available in different colors like blue and other colors. The smartphone is powered by the MediaTek Helio G35 Octa-core processor while the GPU is Mali-G31. The smartphone comes in 6.53 inches size and the display is IPS LCD capacitive touchscreen that provides 720 x 1600 pixels resolution.",
+        "merk": "Xiaomi",
+        "stock": 20,
+        "price": 1090000,
+        "url": "https://i01.appmifile.com/webfile/globalweb/wangmingxin/C3M.png"
+    }
+]
