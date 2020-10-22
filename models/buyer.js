@@ -2,6 +2,7 @@
 const {
   Model
 } = require('sequelize');
+const bcrypt = require('bcryptjs')
 module.exports = (sequelize, DataTypes) => {
   class Buyer extends Model {
     /**
@@ -23,10 +24,18 @@ module.exports = (sequelize, DataTypes) => {
     gender: DataTypes.STRING,
     username: DataTypes.STRING,
     birth_date: DataTypes.STRING,
-    password: DataTypes.STRING
+    password: DataTypes.STRING,
+    isLogin: DataTypes.BOOLEAN
   }, {
     sequelize,
     modelName: 'Buyer',
   });
+
+  Buyer.addHook('beforeCreate', (instance, options) => {
+    // console.log(instance)
+    let hashPassword = bcrypt.hashSync(instance.password, 10)
+    instance.password = hashPassword
+  })
+
   return Buyer;
 };

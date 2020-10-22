@@ -23,6 +23,9 @@ module.exports = {
       username: {
         type: Sequelize.STRING
       },
+      isLogin: {
+        type: Sequelize.BOOLEAN
+      },
       birth_date: {
         type: Sequelize.STRING
       },
