@@ -1,8 +1,8 @@
 {
-  "name": "ManekiNekoCell",
+  "name": "manekinekocell",
   "version": "1.0.0",
   "description": "Phase - 1 | Pair Project Mohammad Fitrah Ramadhan Lamusu and Farhan Haryawan",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,16 +11,22 @@
     "url": "git+https://github.com/itsagra/ManekiNekoCell.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "agra and farhan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/itsagra/ManekiNekoCell/issues"
   },
   "homepage": "https://github.com/itsagra/ManekiNekoCell#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
+    "express-session": "^1.17.1",
     "pg": "^8.4.1",
     "sequelize": "^6.3.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6",
+    "sequelize-cli": "^6.2.0"
   }
 }
