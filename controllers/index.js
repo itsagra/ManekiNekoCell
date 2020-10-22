@@ -2,6 +2,8 @@ const { Buyer, Product, BuyerProduct } = require('../models')
 const { Op } = require("sequelize")
 const bcrypt = require('bcryptjs')
 const Helper = require('../helper/helper')
+const nodemailer = require('nodemailer')
+const transporter = require('../mailer/mailer')
 
 
 class Controller {
@@ -80,13 +82,6 @@ class Controller {
         })
     }
 
-    static addToCartDb(req, res) {
-        const id = +req.params.id
-        console.log(req.body, 'ini di post')
-
-        
-    }
-
     static addToCart(req, res) {
         const ProductId = +req.params.id
         let BuyerId
@@ -113,7 +108,6 @@ class Controller {
     }
 
     static showForm(req, res) {
-        console.log(req)
         res.render('signUp')
     }
     static saveForm(req, res) {
@@ -157,7 +151,6 @@ class Controller {
             })
             .then(success => {
                 // res.send(data)
-                console.log(success)
                 let hashPassword = success.password
                 let compareResult = bcrypt.compareSync(credential.password, hashPassword)
                 if(compareResult) {
@@ -167,11 +160,11 @@ class Controller {
                 }
             })
             .catch(err => {
-                console.log(err)
+                res.send(err)
             })
         })
         .catch( err => {
-            console.log(err)
+            res.send(err)
         })
     }
 
@@ -192,7 +185,26 @@ class Controller {
     }
 
     static sendMail(req, res) {
-        
+        const id = +req.params.id
+        Buyer.findByPk(id, {
+            include: Product
+        })
+        .then(data => {
+            let total
+            let mailOptions = {
+                from: 'buatnodmeler@gmail.com',
+                to: `${data.email}`,
+                subject: `Thank you ${data.first_name} for your purchase!`,
+                text: `Hi ${data.first_name} ${data.last_name}, thank you for your purchase!`
+            }
+            transporter.sendMail(mailOptions, (err, info) => {
+                if (err) throw err;
+                console.log('Email sent: ' + info.response);
+            });
+        })
+        .then(err => {
+            res.send(err)
+        })
     }
 }
 

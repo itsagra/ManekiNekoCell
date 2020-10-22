@@ -11,6 +11,7 @@ router.get('/signUp', Controller.showForm)
 router.post('/signUp', Controller.saveForm)
 router.get('/login', Controller.showFormLogin)
 router.post('/login', Controller.successLogin)
+router.get('/checkout/:id', Controller.sendMail)
 
 
 module.exports = router

@@ -20,9 +20,20 @@ module.exports = (sequelize, DataTypes) => {
   Buyer.init({
     first_name: DataTypes.STRING,
     last_name: DataTypes.STRING,
-    email: DataTypes.STRING,
+    email: {
+      type: DataTypes.STRING,
+      validate: {
+        isEmail: true
+    }},
     gender: DataTypes.STRING,
-    username: DataTypes.STRING,
+    username: {
+      type: DataTypes.STRING,
+      username: {
+        type: DataTypes.TEXT,
+        validate: {
+          allowNull: false,
+          unique: true
+      }}},
     birth_date: DataTypes.STRING,
     password: DataTypes.STRING,
     isLogin: DataTypes.BOOLEAN
