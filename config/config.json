@@ -1,8 +1,9 @@
 {
   "development": {
     "username": "postgres",
-    "password": "hanfarhan22",
+    "password": "dacokeh21",
     "database": "ManekiNekoCell",
+    "port": 8080,
     "host": "127.0.0.1",
     "dialect": "postgres"
   },

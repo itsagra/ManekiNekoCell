@@ -1,5 +1,5 @@
 'use strict';
-const phone = require('../phone.json')
+const phone = require('../datas/phone.json')
 phone.forEach(element => {
   element.createdAt = new Date()
   element.updatedAt = new Date()
