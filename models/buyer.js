@@ -43,9 +43,9 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Buyer.addHook('beforeCreate', (instance, options) => {
-    // console.log(instance)
     let hashPassword = bcrypt.hashSync(instance.password, 10)
     instance.password = hashPassword
+    instance.isLogin = false
   })
 
   return Buyer;
