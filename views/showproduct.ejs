@@ -29,7 +29,7 @@
             <p><%= data.description %></p>
             <small class="text-muted">Current stock: <%= data.stock %> pcs left</small>
             <hr>
-            <form action="/cart/?add=<%= data.id %>" method="POST">
+            <form action="/cart/add/<%= data.id %>" method="POST">
                 <input type="submit" value="Add to cart">
               </form> 
           </div>

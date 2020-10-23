@@ -1,10 +1,19 @@
 const { Buyer, Product, BuyerProduct } = require('../models')
 const { Op } = require("sequelize")
+const bcrypt = require('bcryptjs')
+const Helper = require('../helper/helper')
+const nodemailer = require('nodemailer')
+const transporter = require('../mailer/mailer')
 
 
 class Controller {
     static homePage(req, res) {
+        res.redirect('/products')
+    }
 
+    static showFormLogin(req, res) {
+        req.session.isLogin = false
+        res.render('login')
     }
 
     static showAllProducts(req, res) {
@@ -64,34 +73,207 @@ class Controller {
     }
 
     static showCart(req, res) {
-        // const id = req.body
-        // Buyer.findOne(id, {
-        //     include: Product
-        // })
-        // .then(data => {
-        //     res.render('cart', { data })
-        // })
-        // .catch(err => {
-        //     res.send(err)
-        // })
-        res.render('cart')
+        Buyer.findOne({
+            where: {
+                isLogin: true
+            },
+            include: Product
+        })
+        .then(data => {
+            res.render('cart', { data, Product, Helper })
+        })
+        .catch(err => {
+            res.send(err)
+        })
     }
 
     static addToCartDb(req, res) {
         const id = +req.params.id
-        console.log(req.body, 'ini di post')
+        Product
+        .findByPk(id)
+        .then(data => {
+            res.render('cart', { data })
+        })
+        .catch(err => {
+            res.send(err)
+        })
 
-        
+
     }
 
     static addToCart(req, res) {
-        const ProductId = +req.query.add
-        let UserId
-        BuyerProduct.create(ProductId)
+        const ProductId = +req.params.id
+        let BuyerId
+        Buyer.findOne({
+            where: {
+                isLogin: true
+            }
+        })
+        .then(data => {
+            BuyerId = data.id
+            BuyerProduct.create({
+                ProductId, BuyerId
+            })
+            .then(() => {
+                res.redirect('/cart')
+            })
+            .catch(err => {
+                res.send(err)
+            })
+        })
+        .catch(err => {
+            res.send(err)
+        })
+    }
+
+    static showForm(req, res) {
+        res.render('signUp')
+    }
+    static saveForm(req, res) {
+        let dataBuyer = {
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            email: req.body.email,
+            gender: req.body.gender,
+            username: req.body.username,
+            birth_date: req.body.birth_date,
+            password: req.body.password
+        }
+        Buyer
+        .create(dataBuyer)
+        .then( data => {
+            res.redirect('/login')
+        })
+        .catch( err => {
+            res.send(err)
+        })
+    }
+    static showFormLogin(req, res) {
+        res.render('login')
+    }
+
+    static successLogin(req, res) {
+        let credential = {
+            username: req.body.username,
+            password: req.body.password
+        }
+        Buyer.update({isLogin: true}, {
+            where: {
+                username: credential.username
+            }
+        })
+        .then( data => {
+            Buyer.findOne({
+                where: {
+                    username: credential.username
+                }
+            })
+            .then(success => {
+                // res.send(data)
+                let hashPassword = success.password
+                let compareResult = bcrypt.compareSync(credential.password, hashPassword)
+                if(compareResult) {
+                    res.send('Berhasil login') // di arahkan ke list product
+                } else {
+                    res.redirect('/login')
+                }
+            })
+            .catch(err => {
+                res.send(err)
+            })
+        })
+        .catch( err => {
+            res.send(err)
+        })
+    }
+
+    static deleteItem(req, res) {
+        const id = +req.params.id
+        BuyerProduct.destroy({
+            where: {
+                ProductId: id
+            },
+            limit: 1
+        })
         .then(() => {
             res.redirect('/cart')
         })
         .catch(err => {
+            res.send(err)
+        })
+    }
+
+    static sendMail(req, res) {
+        const id = +req.params.id
+        Buyer.findByPk(id, {
+            include: Product
+        })
+        .then(data => {
+            let total
+            let mailOptions = {
+                from: 'buatnodmeler@gmail.com',
+                to: `${data.email}`,
+                subject: `Thank you ${data.first_name} for your purchase!`,
+                text: `Hi ${data.first_name} ${data.last_name}, thank you for your purchase!`
+            }
+            transporter.sendMail(mailOptions, (err, info) => {
+                if (err) throw err;
+                console.log('Email sent: ' + info.response);
+            });
+        })
+        .then(err => {
+            res.send(err)
+        })
+    }
+
+    static successLogin(req, res) {
+        let credential = {
+            username: req.body.username,
+            password: req.body.password
+        }
+        Buyer
+        .findOne({
+            where: {
+                username: credential.username
+                // password: credential.password
+            }
+        })
+        .then( data => {
+            // res.send(data.password)
+            let hashPassword = data.password
+            let compareResult = bcrypt.compareSync(credential.password, hashPassword)
+            if(compareResult) {
+                req.session.isLogin = true
+                res.redirect('/products')
+            } else {
+                res.redirect('/login')
+            }
+        })
+        .catch( err => {
+            res.send(err)
+        })
+    }
+
+    static showFormSignup(req, res) {
+        res.render('signUp')
+    }
+
+    static saveFormSignup(req, res) {
+        let dataBuyer = {
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            email: req.body.email,
+            gender: req.body.gender,
+            username: req.body.username,
+            birth_date: req.body.birth_date,
+            password: req.body.password
+        }
+        Buyer
+        .create(dataBuyer)
+        .then( data => {
+            res.redirect('/login')
+        })
+        .catch( err => {
             res.send(err)
         })
     }
